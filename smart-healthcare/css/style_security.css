@@ -1,0 +1,41 @@
+/* Styles specific to Security page */
+
+.security-settings {
+    max-width: 700px;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.security-settings h2 {
+    color: #e91e63;
+    margin-top: 0;
+}
+
+.security-settings label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.security-settings input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.security-settings button {
+    margin-top: 20px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.security-settings button:hover {
+    background-color: #ad1457;
+}

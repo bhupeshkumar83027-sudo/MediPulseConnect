@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Hospitals</title>
+    <link rel="stylesheet" href="css/style_hospitals.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 Nearby Hospitals</h1>
+        <p>Find hospitals near you.</p>
+
+        <div class="hospital-list">
+            <div class="hospital-item" data-name="City Hospital" data-address="123 Main St" data-distance="2 km" data-phone="+1234567890">
+                <h3>🏥 City Hospital</h3>
+                <p>Address: 123 Main St</p>
+                <p>Distance: 2 km</p>
+            </div>
+
+            <div class="hospital-item" data-name="Green Valley Medical Center" data-address="45 Lake Road" data-distance="3.5 km" data-phone="+1234567891">
+                <h3>🏥 Green Valley Medical Center</h3>
+                <p>Address: 45 Lake Road</p>
+                <p>Distance: 3.5 km</p>
+            </div>
+
+            <div class="hospital-item" data-name="Sunrise Health Clinic" data-address="12 Park Avenue" data-distance="4 km" data-phone="+1234567892">
+                <h3>🏥 Sunrise Health Clinic</h3>
+                <p>Address: 12 Park Avenue</p>
+                <p>Distance: 4 km</p>
+            </div>
+
+            <div class="hospital-item" data-name="City Hospital" data-address="123 Main St" data-distance="2 km" data-phone="+1234567890">
+                <h3>🏥 City Hospital</h3>
+                <p>Address: 123 Main St</p>
+                <p>Distance: 2 km</p>
+            </div>
+
+            <div class="hospital-item" data-name="Green Valley Medical Center" data-address="45 Lake Road" data-distance="3.5 km" data-phone="+1234567891">
+                <h3>🏥 Green Valley Medical Center</h3>
+                <p>Address: 45 Lake Road</p>
+                <p>Distance: 3.5 km</p>
+            </div>
+
+            <div class="hospital-item" data-name="Sunrise Health Clinic" data-address="12 Park Avenue" data-distance="4 km" data-phone="+1234567892">
+                <h3>🏥 Sunrise Health Clinic</h3>
+                <p>Address: 12 Park Avenue</p>
+                <p>Distance: 4 km</p>
+            </div>
+        </div>
+
+        <!-- Modal for hospital details -->
+        <div id="hospitalModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-header">
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-subtitle">Hospital Details</div>
+                </div>
+                <div class="modal-body">
+                    <div class="detail-item">
+                        <span class="detail-icon">📍</span>
+                        <span id="modalAddress"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">📏</span>
+                        <span id="modalDistance"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">📞</span>
+                        <span id="modalPhone"></span>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <a id="emergencyCall" href="#" class="emergency-btn">Emergency Call</a>
+                    <a id="viewOnMap" href="#" target="_blank" class="map-btn">View on Map</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="dashboard_patient.html" class="back-btn">⬅ Back to Dashboard</a>
+    </div>
+
+    <script src="js/script_hospitals.js"></script>
+
+</body>
+</html>
+
+
+
+

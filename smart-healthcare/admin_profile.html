@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="css/style_admin_profile.css">
+</head>
+<body>
+    <div class="container">
+        <header class="profile-header">
+            <h1>👤 Admin Profile</h1>
+            <p>View and manage your admin profile information.</p>
+        </header>
+        <div class="profile-content">
+            <div class="profile-info">
+                <div class="info-item">
+                    <label>Name:</label>
+                    <span id="display-name">Admin User</span>
+                </div>
+                <div class="info-item">
+                    <label>Email:</label>
+                    <span id="display-email">admin@smarthealthcare.com</span>
+                </div>
+                <div class="info-item">
+                    <label>Role:</label>
+                    <span>Administrator</span>
+                </div>
+                <div class="info-item">
+                    <label>Joined:</label>
+                    <span>January 2023</span>
+                </div>
+            </div>
+            <div class="profile-actions">
+                <button class="edit-btn" id="edit-profile-btn">Edit Profile</button>
+                <button class="back-btn" onclick="window.history.back()">Back to Dashboard</button>
+            </div>
+        </div>
+
+        <!-- Edit Profile Modal -->
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal">&times;</span>
+                <h2>Edit Profile</h2>
+                <form id="edit-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" value="Admin User" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="admin@smarthealthcare.com" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn">Save Changes</button>
+                        <button type="button" class="cancel-btn" id="cancel-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script_admin_profile.js"></script>
+</body>
+</html>

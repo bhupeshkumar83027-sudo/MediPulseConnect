@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Notifications</title>
+    <link rel="stylesheet" href="css/style_admin_notifications.css">
+</head>
+<body>
+    <div class="container">
+        <header class="notifications-header">
+            <h1>🔔 Admin Notifications</h1>
+            <p>Stay updated with the latest system notifications.</p>
+        </header>
+        <div class="notifications-list">
+            <div class="notification-item" data-type="info">
+                <div class="notification-icon">ℹ️</div>
+                <div class="notification-content">
+                    <h3>New Doctor Registration</h3>
+                    <p>Dr. Smith has registered and is awaiting approval.</p>
+                    <span class="notification-time">2 hours ago</span>
+                </div>
+            </div>
+            <div class="notification-item" data-type="warning">
+                <div class="notification-icon">⚠️</div>
+                <div class="notification-content">
+                    <h3>System Maintenance</h3>
+                    <p>Scheduled maintenance in 24 hours.</p>
+                    <span class="notification-time">1 day ago</span>
+                </div>
+            </div>
+            <div class="notification-item" data-type="success">
+                <div class="notification-icon">✅</div>
+                <div class="notification-content">
+                    <h3>Backup Completed</h3>
+                    <p>Daily backup completed successfully.</p>
+                    <span class="notification-time">3 days ago</span>
+                </div>
+            </div>
+            <div class="notification-item" data-type="error">
+                <div class="notification-icon">❌</div>
+                <div class="notification-content">
+                    <h3>Failed Login Attempt</h3>
+                    <p>Multiple failed login attempts detected.</p>
+                    <span class="notification-time">5 days ago</span>
+                </div>
+            </div>
+        </div>
+        <div class="back-btn-container">
+            <button class="back-btn" onclick="window.history.back()">Back to Dashboard</button>
+        </div>
+    </div>
+    <script src="js/script_admin_notifications.js"></script>
+</body>
+</html>

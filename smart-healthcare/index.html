@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmartSehat - Healthcare Solution</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style_index.css">
+
+  <!-- Heroicons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, #0077b6, #00b4d8);
+      color: white;
+      padding: 60px 40px;
+    }
+    .hero-content h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .hero-content h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .btn-primary {
+      background-color: #ffffff;
+      color: #0077b6;
+      font-weight: bold;
+      padding: 12px 25px;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
+      display: inline-block;
+    }
+    .btn-primary:hover {
+      background-color: #023e8a;
+      color: #ffffff;
+    }
+    .opening-hours {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 40px 20px;
+      margin: 40px 20px;
+      background-color: #d0e8f2;
+      border-radius: 15px;
+    }
+    .opening-hours h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Top Bar -->
+  <header>
+    <div class="bg-blue-600 text-white p-4 flex justify-between items-center">
+      <div class="font-semibold space-x-6 flex items-center">
+        <span class="flex items-center gap-2"><i data-feather="phone"></i>+91-1543558829</span>
+        <span class="flex items-center gap-2"><i data-feather="mail"></i> SmartSehat@example.com</span>
+      </div>
+      <div class="space-x-4 flex">
+        <a href="#" class="hover:scale-125 transform transition duration-300">
+          <i data-feather="facebook"></i>
+        </a>
+        <a href="#" class="hover:scale-125 transform transition duration-300">
+          <i data-feather="twitter"></i>
+        </a>
+        <a href="#" class="hover:scale-125 transform transition duration-300">
+          <i data-feather="linkedin"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center space-x-4">
+            <div class="logo flex items-center">
+              <img src="Logo.jpeg" alt="SmartSehat Logo" class="h-10 w-auto rounded-md" />
+              <span class="ml-3 font-bold text-xl text-blue-600">SmartSehat</span>
+            </div>
+            <form class="flex items-center space-x-2">
+              <input type="text" placeholder="Search..." class="w-64 px-3 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+              <button type="submit" class="text-gray-700 hover:text-blue-600">
+                <i data-feather="search" class="w-5 h-5"></i>
+              </button>
+            </form>
+          </div>
+          <div class="flex space-x-6">
+            <a href="home.html" class="text-gray-700 hover:text-blue-600 font-semibold text-lg">Home</a>
+            <a href="about.html" class="text-gray-700 hover:text-blue-600 font-semibold text-lg">About</a>
+            <a href="contact.html" class="text-gray-700 hover:text-blue-600 font-semibold text-lg">Contact</a>
+            <a href="role.html" class="text-gray-700 hover:text-blue-600 font-semibold text-lg">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content max-w-lg">
+      <h1><i data-feather="heart" class="inline-block mr-2"></i> WE PROVIDE</h1>
+      <h2><i data-feather="activity" class="inline-block mr-2"></i> TOTAL HEALTH CARE SOLUTION</h2>
+      <p class="mb-6 flex items-center gap-2">
+        <i data-feather="monitor"></i>
+        See your cardiovascular system in action with our interactive illustrations and animations.
+      </p>
+      <a href="language.html" id="symptom-checker-btn" class="btn-primary flex items-center gap-2">
+        <i data-feather="book-open"></i> Explore Now
+      </a>
+    </div>
+    <div class="hero-image max-w-md">
+      <img src="MediPulse.jpg" alt="Doctor Smiling" class="rounded-lg shadow-lg">
+    </div>
+  </section>
+
+  <!-- Opening Hours -->
+  <section class="opening-hours">
+    <div class="hours text-blue-900 max-w-sm">
+      <h3 class="flex items-center gap-2"><i data-feather="clock"></i> 24/7 Hours Open</h3>
+      <ul class="space-y-2">
+          <li class="flex items-center gap-2">
+        <i data-feather="activity"></i> Symptom check & medicine suggestions
+      </li>
+      <li class="flex items-center gap-2">
+        <i data-feather="mic"></i> Connect with doctor via voice call
+      </li>
+      <li class="flex items-center gap-2">
+        <i data-feather="video"></i> Connect with doctor via video call
+      </li>
+      <li class="flex items-center gap-2">
+        <i data-feather="alert-triangle"></i> Emergency? Connect to nearest hospital
+      </li>
+      </ul>
+    </div>
+    <div class="about text-blue-800 max-w-sm">
+      <h3 class="flex items-center gap-2"><i data-feather="info"></i> About SmartSehat</h3>
+       <!-- <p class="about-text">
+        At <strong>Smart Sehat</strong>, we make quality healthcare accessible to every village. Rural families often face long journeys, high costs, and delayed treatments — turning simple health issues into serious risks.
+        <br><br> -->
+        <strong>Smart Sehat</strong> is a telemedicine platform that connects patients with doctors via video, audio, or chat consultations from home. Each patient receives a unique health ID to securely store medical records, ensuring seamless care across visits.
+    </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold flex items-center gap-2">
+            <i data-feather="heart" class="text-red-400"></i>
+            SmartSehat
+          </h3>
+          <p class="text-blue-100 text-sm">
+            Your trusted healthcare companion providing AI-powered symptom checking and doctor consultations.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-blue-200 hover:text-white transition-colors">
+              <i data-feather="facebook" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="text-blue-200 hover:text-white transition-colors">
+              <i data-feather="twitter" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="text-blue-200 hover:text-white transition-colors">
+              <i data-feather="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="text-blue-200 hover:text-white transition-colors">
+              <i data-feather="instagram" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-4">
+          <h4 class="text-lg font-semibold">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="text-blue-200 hover:text-white transition-colors">Home</a></li>
+            <li><a href="symptoms.html" class="text-blue-200 hover:text-white transition-colors">Symptom Checker</a></li>
+            <li><a href="hospitals.html" class="text-blue-200 hover:text-white transition-colors">Find Hospitals</a></li>
+            <li><a href="contact.html" class="text-blue-200 hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="space-y-4">
+          <h4 class="text-lg font-semibold">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2">
+              <i data-feather="stethoscope" class="w-4 h-4 text-blue-300"></i>
+              <a href="symptoms.html" class="text-blue-200 hover:text-white transition-colors">AI Diagnosis</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-feather="video" class="w-4 h-4 text-blue-300"></i>
+              <a href="contact_doctor.html" class="text-blue-200 hover:text-white transition-colors">Video Consultation</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-feather="phone" class="w-4 h-4 text-blue-300"></i>
+              <a href="hospitals.html" class="text-blue-200 hover:text-white transition-colors">Emergency Call</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-feather="file-text" class="w-4 h-4 text-blue-300"></i>
+              <a href="upload_reports.html" class="text-blue-200 hover:text-white transition-colors">Report Upload</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-4">
+          <h4 class="text-lg font-semibold">Contact Info</h4>
+          <div class="space-y-2 text-sm">
+            <div class="flex items-center gap-2">
+              <i data-feather="phone" class="w-4 h-4 text-blue-300"></i>
+              <span>+91-1543558829</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-feather="mail" class="w-4 h-4 text-blue-300"></i>
+              <span>SmartSehat@example.com</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-feather="map-pin" class="w-4 h-4 text-blue-300"></i>
+              <span>Jaipur , India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-blue-500 mt-8 pt-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-blue-200 text-sm flex items-center gap-2">
+            <i data-feather="copyright"></i>
+            2025 SmartSehat. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+            <a href="#" class="text-blue-200 hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" class="text-blue-200 hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" class="text-blue-200 hover:text-white transition-colors">Disclaimer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script_index.js"></script>
+  <script src="js/script_language.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
+    

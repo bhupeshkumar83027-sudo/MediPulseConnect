@@ -1,0 +1,1 @@
+recognition.lang = 'hi-IN'; // For Hindi

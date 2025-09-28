@@ -1,0 +1,86 @@
+/* Styles for Admin Dashboard */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #222;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.dashboard-card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.dashboard-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+.dashboard-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.logout-section {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.creative-logout-btn {
+    background: #ff4b5c;
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 75, 92, 0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creative-logout-btn:hover {
+    background: #ff1e2d;
+    box-shadow: 0 6px 18px rgba(255, 30, 45, 0.8);
+}

@@ -1,0 +1,322 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+}
+
+.patient-query, .response-form {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.patient-query:hover, .response-form:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.patient-query h2, .response-form h2 {
+    margin-top: 0;
+    color: #4a5568;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.query-details p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.response-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.response-form label {
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.response-form textarea, .response-form input[type="date"] {
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.response-form textarea:focus, .response-form input[type="date"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+}
+
+.submit-btn {
+    margin-top: 25px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-self: flex-start;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+}
+
+
+/* Footer styles */
+footer.bg-gradient-to-r {
+  background: linear-gradient(to right, #2563eb, #1e40af);
+  color: white;
+  padding: 3rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer .max-w-6xl {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+footer .grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  footer .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+footer h3, footer h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+footer p, footer ul, footer span {
+  color: #bfdbfe;
+  font-size: 0.875rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+  color: #bfdbfe;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: white;
+}
+
+footer .flex {
+  display: flex;
+  align-items: center;
+}
+
+footer .space-x-4 > * + * {
+  margin-left: 1rem;
+}
+
+footer .space-x-6 > * + * {
+  margin-left: 1.5rem;
+}
+
+footer .text-blue-200 {
+  color: #bfdbfe;
+}
+
+footer .text-blue-100 {
+  color: #dbeafe;
+}
+
+footer .text-blue-300 {
+  color: #93c5fd;
+}
+
+footer .border-t {
+  border-top: 1px solid #3b82f6;
+}
+
+footer .transition-colors {
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer .text-sm {
+  font-size: 0.875rem;
+}
+
+footer .text-xl {
+  font-size: 1.25rem;
+}
+
+footer .font-bold {
+  font-weight: 700;
+}
+
+footer .font-semibold {
+  font-weight: 600;
+}
+
+footer .gap-2 {
+  gap: 0.5rem;
+}
+
+footer .p-6 {
+  padding: 1.5rem;
+}
+
+footer .py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer .px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+footer .mt-8 {
+  margin-top: 2rem;
+}
+
+footer .pt-6 {
+  padding-top: 1.5rem;
+}
+
+footer .hover\:text-white:hover {
+  color: white;
+}
+
+footer .text-center {
+  text-align: center;
+}
+
+footer .items-center {
+  align-items: center;
+}
+
+footer .justify-center {
+  justify-content: center;
+}
+
+footer .flex-col {
+  flex-direction: column;
+}
+
+footer .md\:flex-row {
+  flex-direction: row;
+}
+
+footer .md\:mt-0 {
+  margin-top: 0;
+}
+
+footer .space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+footer .space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+footer .text-red-400 {
+  color: #f87171;
+}
+
+footer .w-4 {
+  width: 1rem;
+}
+
+footer .h-4 {
+  height: 1rem;
+}
+
+footer .w-5 {
+  width: 1.25rem;
+}
+
+footer .h-5 {
+  height: 1.25rem;
+}

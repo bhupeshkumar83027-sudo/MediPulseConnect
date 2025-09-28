@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Calls Simulation</title>
+    <link rel="stylesheet" href="css/style_emergency_calls.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚨 Emergency Calls Simulation Demo</h1>
+        <p>Simulate incoming emergency calls for demonstration purposes.</p>
+
+        <!-- Incoming Emergency Calls Section -->
+        <div class="emergency-calls-section">
+            <h2>📞 Incoming Emergency Calls</h2>
+            <div class="emergency-calls-list" id="emergencyCallsList">
+                <div class="emergency-call-item" data-caller="Patient A" data-location="Downtown" data-time="10:30 AM">
+                    <h4>📞 Patient A</h4>
+                    <p>Location: Downtown</p>
+                    <p>Time: 10:30 AM</p>
+                    <button class="respond-btn">Respond</button>
+                </div>
+                <div class="emergency-call-item" data-caller="Patient B" data-location="Uptown" data-time="11:00 AM">
+                    <h4>📞 Patient B</h4>
+                    <p>Location: Uptown</p>
+                    <p>Time: 11:00 AM</p>
+                    <button class="respond-btn">Respond</button>
+                </div>
+                <div class="emergency-call-item" data-caller="Patient D" data-location="City Center" data-time="12:30 PM">
+                    <h4>📞 Patient D</h4>
+                    <p>Location: City Center</p>
+                    <p>Time: 12:30 PM</p>
+                    <button class="respond-btn">Respond</button>
+                </div>
+            </div>
+            <button id="simulateCallBtn" class="simulate-btn">Simulate New Emergency Call</button>
+        </div>
+
+        <!-- Response Modal -->
+        <div id="responseModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-header">
+                    <h2 id="modalTitle">Emergency Response</h2>
+                    <div class="modal-subtitle">Call Details</div>
+                </div>
+                <div class="modal-body">
+                    <div class="detail-item">
+                        <span class="detail-icon">👤</span>
+                        <span id="modalCaller"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">📍</span>
+                        <span id="modalLocation"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">🕐</span>
+                        <span id="modalTime"></span>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button id="confirmResponse" class="confirm-btn">Confirm Response</button>
+                    <button id="cancelResponse" class="cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="hospitals.html" class="back-btn">⬅ Back to Hospitals</a>
+            <a href="dashboard_patient.html" class="dashboard-btn">🏠 Dashboard</a>
+        </div>
+    </div>
+
+    <script src="js/script_emergency_calls.js"></script>
+</body>
+</html>

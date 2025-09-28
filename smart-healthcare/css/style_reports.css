@@ -1,0 +1,36 @@
+/* Styles specific to Reports page */
+
+.reports-section {
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.reports-section h2 {
+    color: #009688;
+    margin-top: 0;
+}
+
+.reports-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.reports-section th, .reports-section td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.reports-section th {
+    background-color: #009688;
+    color: white;
+}
+
+.reports-section tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

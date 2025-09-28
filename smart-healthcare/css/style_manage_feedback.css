@@ -1,0 +1,78 @@
+/* Styles specific to Manage Feedback page */
+
+.feedback-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.feedback-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.feedback-item:hover {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.feedback-item h2 {
+    margin-top: 0;
+    color: #007bff;
+    font-weight: 700;
+}
+
+.feedback-item p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.feedback-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.feedback-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-actions .approve-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.feedback-actions .approve-btn:hover {
+    background-color: #218838;
+}
+
+.feedback-actions .reject-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.feedback-actions .reject-btn:hover {
+    background-color: #c82333;
+}

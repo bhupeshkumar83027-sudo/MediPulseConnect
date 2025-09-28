@@ -1,0 +1,52 @@
+/* Styles specific to Manage Users page */
+
+.user-list {
+    margin-top: 20px;
+}
+
+.user-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-list th, .user-list td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.user-list th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.user-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.action-buttons button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.action-buttons .edit-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.action-buttons .delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.action-buttons .edit-btn:hover {
+    background-color: #0b7dda;
+}
+
+.action-buttons .delete-btn:hover {
+    background-color: #da190b;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Doctor</title>
+    <link rel="stylesheet" href="css/style_contact_doctor.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            
+            <h1>📞 Contact Doctor</h1>
+            <p>Get in touch with your healthcare provider for personalized advice and support.</p>
+            <a href="dashboard_patient.html" class="back-btn">← Back to Dashboard</a>
+        </header>
+    <div class="contact-area">
+            <div class="contact-card">
+                <div class="contact-icon">📹</div>
+                <h2>Video Call</h2>
+                <p>Start a live video call with your doctor using WebRTC.</p>
+                <div id="video-call-section" style="display:none;">
+                    <div id="video-call-name" style="font-size: 1.2em; font-weight: bold; margin-bottom: 10px;"></div>
+                    <video id="localVideo" autoplay playsinline style="width: 45%; max-height: 200px; border-radius: 15px; cursor: pointer;"></video>
+                    <video id="remoteVideo" autoplay playsinline style="width: 45%; max-height: 200px; border-radius: 15px;"></video>
+                    <button id="stop-video-btn" class="call-btn stop-btn">End Call</button>
+                </div>
+                <button id="video-call-btn" class="call-btn">Start Video Call</button>
+            </div>
+            <div class="contact-card" id="voice-call-card">
+                <div class="contact-icon">📞</div>
+                <h2>Voice Call</h2>
+                <p>Start a live voice call with your doctor using WebRTC.</p>
+                <div id="voice-call-section" style="display:none;">
+                    <div id="voice-call-name" style="font-size: 1.2em; font-weight: bold; margin-bottom: 10px;"></div>
+                    <button id="stop-voice-btn" class="call-btn stop-btn">End Call</button>
+                </div>
+                <button id="voice-call-btn" class="call-btn">Start Voice Call</button>
+            </div>
+        <div class="message-card">
+    <div class="contact-icon">💬</div>
+    <h2>Send a Message</h2>
+    <p>Fill out the form below to contact your doctor.</p>
+
+    <div class="contact-form">
+        <div class="form-group">
+            <label for="query">Query</label>
+            <textarea id="query" rows="6" placeholder="Type your query"></textarea>
+        </div>
+
+        <button class="send-btn">Send Message</button>
+    </div>
+</div>
+    </div>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="js/script_contact_doctor.js"></script>
+
+</body>
+</html>
+
+
+
+

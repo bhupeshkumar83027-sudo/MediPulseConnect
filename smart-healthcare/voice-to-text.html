@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voice to Text Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        #output { font-size: 1.5em; margin-top: 20px; color: #333; }
+        button { font-size: 1.2em; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>🎙️ Voice to Text (Web Speech API)</h1>
+    <button onclick="startRecognition()">Start Listening</button>
+    <p id="output">Say something...</p>
+
+    <script>
+        
+        function startRecognition() {
+            if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+                alert("Sorry, your browser doesn't support Speech Recognition.");
+                return;
+            }
+
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const recognition = new SpeechRecognition();
+
+            recognition.lang = 'en-US'; // You can change this to 'hi-IN' for Hindi
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            recognition.start();
+
+            document.getElementById("output").textContent = "Listening...";
+
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript;
+                document.getElementById("output").textContent = "You said: " + transcript;
+            };
+
+            recognition.onerror = function(event) {
+                document.getElementById("output").textContent = "Error: " + event.error;
+            };
+
+            recognition.onend = function() {
+                console.log("Speech recognition ended.");
+            };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Patient Queries - Doctor</title>
+    <link rel="stylesheet" href="css/style_patient_queries.css" />
+</head>
+<body>
+    <header>
+        <h1>💬 Patient Queries</h1>
+        <a href="dashboard_doctor.html" class="back-btn">← Back to Dashboard</a>
+    </header>
+    <div class="container">
+        <div class="filters">
+            <label for="date-filter">Filter by Date:</label>
+            <input type="date" id="date-filter">
+            <label for="urgency-filter">Urgency:</label>
+            <select id="urgency-filter">
+                <option>All</option>
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+            </select>
+        </div>
+        <div class="queries-list">
+            <!-- Queries will be loaded dynamically via JavaScript -->
+        </div>
+    </div>
+    <script src="js/script_patient_queries.js"></script>
+
+</body>
+</html>
+
+
+
+

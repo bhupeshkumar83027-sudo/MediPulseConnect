@@ -1,0 +1,105 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.notifications-header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.notifications-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #4a5568;
+}
+
+.notifications-header p {
+    margin: 10px 0 0 0;
+    font-size: 1.2em;
+    color: #718096;
+}
+
+.notifications-list {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item:hover {
+    background: #f7fafc;
+}
+
+.notification-icon {
+    font-size: 2em;
+    margin-right: 20px;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-content h3 {
+    margin: 0 0 5px 0;
+    color: #4a5568;
+}
+
+.notification-content p {
+    margin: 0 0 5px 0;
+    color: #718096;
+}
+
+.notification-time {
+    font-size: 0.9em;
+    color: #a0aec0;
+}
+
+.back-btn-container {
+    text-align: center;
+}
+
+.back-btn {
+    padding: 12px 24px;
+    background: #e2e8f0;
+    color: #4a5568;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #cbd5e0;
+}

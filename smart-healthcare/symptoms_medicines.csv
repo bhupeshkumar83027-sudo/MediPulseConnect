@@ -1,0 +1,101 @@
+Symptom,Medicine
+Headache,Paracetamol
+Fever,Paracetamol
+Cough,Dextromethorphan Syrup
+Sore Throat,Lozenges
+Nausea,Domperidone
+Cold,Antihistamine
+Fatigue,Multivitamins
+Diarrhea,ORS Solution
+Constipation,Lactulose Syrup
+Indigestion,Antacid
+Heartburn,Omeprazole
+Allergies,Loratadine
+Asthma,Inhaler (Salbutamol)
+Diabetes,Metformin
+Hypertension,Amlodipine
+Arthritis,Ibuprofen
+Back Pain,Aceclofenac
+Migraine,Sumatriptan
+Insomnia,Melatonin
+Anxiety,Alprazolam
+Depression,Sertraline
+Acne,Benzoyl Peroxide Cream
+Eczema,Hydrocortisone Cream
+Psoriasis,Coal Tar Ointment
+UTI,Nitrofurantoin
+Yeast Infection,Clotrimazole Cream
+Sinusitis,Paracetamol + Steam Inhalation
+Bronchitis,Azithromycin
+Pneumonia,Amoxicillin
+Flu,Paracetamol
+Chickenpox,Calamine Lotion
+Measles,Paracetamol
+Mumps,Ibuprofen
+Rubella,Paracetamol
+Hepatitis,Liver Supportive Care
+Malaria,Chloroquine
+Dengue,Paracetamol + Fluids
+Typhoid,Ciprofloxacin
+Cholera,ORS + Doxycycline
+Tuberculosis,Rifampicin
+HIV,ART Medicines
+Cancer,Chemotherapy (Specialist Care)
+Anemia,Iron Tablets
+Thyroid Disorders,Levothyroxine
+Osteoporosis,Calcium + Vitamin D
+Gout,Allopurinol
+Kidney Stones,Pain Relievers + Hydration
+Gallstones,Pain Relief + Surgery (if severe)
+Appendicitis,Surgery Required
+Hernia,Surgery Required
+Cataracts,Surgery Required
+Glaucoma,Timolol Eye Drops
+Conjunctivitis,Ofloxacin Eye Drops
+Ear Infection,Amoxicillin
+Toothache,Paracetamol + Clove Oil
+Gum Disease,Chlorhexidine Mouthwash
+Menstrual Cramps,Meftal Spas
+PMS,Vitamin B6
+Erectile Dysfunction,Sildenafil
+Prostate Enlargement,Tamsulosin
+Skin Rash,Calamine Lotion
+High Cholesterol,Atorvastatin
+Low Blood Pressure,ORS + Salt Water
+Blood Clots,Warfarin
+Heart Attack,Aspirin
+Stroke,Aspirin + Clopidogrel
+Epilepsy,Carbamazepine
+Parkinson's,Levodopa
+Alzheimer's,Donepezil
+Multiple Sclerosis,Interferon Beta
+Lupus,Hydroxychloroquine
+Rheumatoid Arthritis,Methotrexate
+Celiac Disease,Gluten-Free Diet
+Crohn's Disease,Mesalamine
+Ulcerative Colitis,Mesalamine
+Hemorrhoids,Hydrocortisone Cream
+Varicose Veins,Compression Stockings
+Sleep Apnea,CPAP Device
+Obesity,Orlistat
+Eating Disorders,Nutritional Therapy
+Addiction,Rehabilitation Program
+Mental Health,SSRIs
+Chronic Pain,Tramadol
+Fibromyalgia,Pregabalin
+Chronic Fatigue,Vitamin Supplements
+Autoimmune Diseases,Immunosuppressants
+Infectious Diseases,Antibiotics
+Respiratory Diseases,Inhalers
+Cardiovascular Diseases,ACE Inhibitors
+Neurological Diseases,Levetiracetam
+Endocrine Diseases,Hormone Replacement
+Gastrointestinal Diseases,Omeprazole
+Urological Diseases,Tamsulosin
+Dermatological Diseases,Hydrocortisone Cream
+Ophthalmological Diseases,Artificial Tears
+Otolaryngological Diseases,Antihistamines
+Orthopedic Diseases,NSAIDs
+Gynecological Diseases,Hormonal Therapy
+Pediatric Diseases,Paracetamol Syrup
+Geriatric Diseases,Multivitamins

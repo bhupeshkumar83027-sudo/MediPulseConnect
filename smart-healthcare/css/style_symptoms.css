@@ -1,0 +1,234 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Enhanced hero section */
+.hero-section {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 0 0 50% 50% / 20%;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+    letter-spacing: 1.5px;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    opacity: 0.85;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+/* Main content container */
+.main-content {
+    max-width: 1100px;
+    margin: -60px auto 40px;
+    padding: 0 20px 40px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Card styles */
+.symptom-card, .medicine-card, .results-card, .contact-doctor-card {
+    background: #f9faff;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.25);
+    padding: 35px 30px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.symptom-card:hover, .medicine-card:hover, .results-card:hover, .contact-doctor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(102, 126, 234, 0.4);
+}
+
+/* Section titles */
+.section-title {
+    font-size: 2.4rem;
+    color: #4a47a3;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+/* Inputs and buttons */
+.medicine-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.medicine-select, .medicine-input {
+    flex: 1 1 250px;
+    padding: 14px 18px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: 2px solid #d1d9ff;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.15);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.medicine-select:focus, .medicine-input:focus {
+    outline: none;
+    border-color: #4a47a3;
+    box-shadow: 0 0 12px rgba(74, 71, 163, 0.6);
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.suggest-btn, .clear-btn, .check-btn, .call-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 32px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.suggest-btn:hover, .clear-btn:hover, .check-btn:hover, .call-btn:hover {
+    background: linear-gradient(135deg, #5a67d8, #6b46c1);
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(90, 103, 216, 0.6);
+}
+
+/* Textarea */
+.symptom-textarea {
+    width: 100%;
+    height: 140px;
+    padding: 18px 20px;
+    border-radius: 15px;
+    border: 2px solid #d1d9ff;
+    font-size: 1.1rem;
+    resize: vertical;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.15);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.symptom-textarea:focus {
+    outline: none;
+    border-color: #4a47a3;
+    box-shadow: 0 0 15px rgba(74, 71, 163, 0.7);
+}
+
+/* Result box */
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: #e6ebff;
+    border-radius: 15px;
+    border-left: 6px solid #4a47a3;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3a3a7a;
+    animation: slideIn 0.6s ease;
+}
+
+/* Results container */
+.results {
+    margin-top: 50px;
+    animation: fadeInUp 0.8s ease;
+}
+
+/* Back button */
+.back-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 16px 36px;
+    background: linear-gradient(135deg, #6c757d, #495057);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(108, 117, 125, 0.5);
+}
+
+
+
+/* Voice styles */
+.voice-section {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.voice-section h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.voice-section button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background: #0078ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.voice-section button:hover {
+  background: #0056b3;
+}
+
+#output {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #444;
+  font-weight: bold;
+}
