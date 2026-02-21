@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartSehat - My Patients</title>
+<link rel="stylesheet" href="css/doctor-patients.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">❤</div>
+            <div>
+                <h3>SmartSehat</h3>
+                <span>Doctor Portal</span>
+            </div>
+        </div>
+
+        <div class="doctor-profile">
+            <div class="avatar">DK</div>
+            <div>
+                <h4>Dr. Deepika Kapoor</h4>
+                <p>Cardiologist • MBBS, MD</p>
+                <span class="online-dot"></span>
+                <small>Available for consultation</small>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="#">Overview</a>
+            <a href="#">Appointments <span class="badge">3</span></a>
+            <a href="#" class="active">My Patients</a>
+            <a href="#">Consultations <span class="badge red">1</span></a>
+            <a href="#">Prescriptions</a>
+            <a href="#">Analytics</a>
+            <a href="#">Settings</a>
+            <a href="#">Notifications <span class="badge">3</span></a>
+            <a href="#" class="logout">Sign Out</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+            <div>
+                <h2>My Patients</h2>
+                <p>View and manage patient records</p>
+            </div>
+
+            <div class="topbar-right">
+                <input type="text" placeholder="Search patients, records...">
+                <div class="profile-mini">
+                    <div class="avatar small">DK</div>
+                    <span>Dr. Deepika Kapoor</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search + Filters -->
+        <div class="patients-toolbar">
+            <input type="text" placeholder="Search patients...">
+            <div class="filters">
+                <button class="active">All</button>
+                <button>Active</button>
+                <button>Stable</button>
+                <button>Critical</button>
+                <button>Recovered</button>
+            </div>
+        </div>
+
+        <!-- Patient Grid -->
+        <div class="patients-grid">
+
+            <!-- Card -->
+            <div class="patient-card">
+                <div class="card-top">
+                    <div class="avatar">AS</div>
+                    <div>
+                        <h4>Arjun Sharma</h4>
+                        <p>34y · Male · O+</p>
+                    </div>
+                    <span class="status stable">Stable</span>
+                </div>
+
+                <div class="card-body">
+                    <p class="condition">Hypertension</p>
+                    <small>Last visit: 15 Feb 2024</small>
+                    <p class="allergy">Penicillin, Sulfa drugs</p>
+                </div>
+
+                <div class="tags">
+                    <span>Amlodipine</span>
+                    <span>Losartan</span>
+                </div>
+            </div>
+
+            <div class="patient-card">
+                <div class="card-top">
+                    <div class="avatar">PP</div>
+                    <div>
+                        <h4>Priya Patel</h4>
+                        <p>28y · Female · B+</p>
+                    </div>
+                    <span class="status active">Active</span>
+                </div>
+
+                <div class="card-body">
+                    <p class="condition">Diabetes Type 2</p>
+                    <small>Last visit: 18 Feb 2024</small>
+                    <p class="allergy">Aspirin</p>
+                </div>
+
+                <div class="tags">
+                    <span>Metformin</span>
+                    <span>Glimepiride</span>
+                </div>
+            </div>
+
+            <div class="patient-card">
+                <div class="card-top">
+                    <div class="avatar">RV</div>
+                    <div>
+                        <h4>Rahul Verma</h4>
+                        <p>45y · Male · A+</p>
+                    </div>
+                    <span class="status critical">Critical</span>
+                </div>
+
+                <div class="card-body">
+                    <p class="condition">Cardiac Arrhythmia</p>
+                    <small>Last visit: 19 Feb 2024</small>
+                    <p class="allergy">Codeine, Latex</p>
+                </div>
+
+                <div class="tags">
+                    <span>Amiodarone</span>
+                    <span>Warfarin</span>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

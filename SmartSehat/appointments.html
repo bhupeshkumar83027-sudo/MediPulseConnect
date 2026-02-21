@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Appointments - SmartSehat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/style_appointments.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">
+      <h2>Smart<span>Sehat</span></h2>
+      <p>Patient Portal</p>
+    </div>
+
+    <ul class="menu">
+      <li><a href="dashboard_patient.html">Dashboard</a></li>
+      <li><a href="symptom_checker.html">Symptom Checker</a></li>
+      <li><a href="ai_assistant.html">AI Assistant</a></li>
+      <li class="active"><a href="appointments.html">Appointments</a></li>
+      <li><a href="health_records.html">Health Records</a></li>
+      <li><a href="consultations.html">Consultations</a></li>
+      <li><a href="my_profile.html">My Profile</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>📅 Appointments</h1>
+      <button class="book-btn">＋ Book Appointment</button>
+    </div>
+
+    <!-- TABS -->
+    <div class="tabs">
+      <button class="tab active">Upcoming</button>
+      <button class="tab">Completed</button>
+      <button class="tab">Cancelled</button>
+    </div>
+
+    <!-- APPOINTMENT LIST -->
+    <div class="appointments-list">
+
+      <!-- Appointment Card -->
+      <div class="appointment-card">
+        <div class="doctor-info">
+          <div class="avatar">PS</div>
+          <div>
+            <h3>Dr. Priya Sharma</h3>
+            <p>Cardiologist</p>
+          </div>
+        </div>
+
+        <div class="appointment-time">
+          <span class="date">Today</span>
+          <span class="time">3:00 PM</span>
+          <span class="status upcoming">upcoming</span>
+        </div>
+      </div>
+
+      <!-- Appointment Card -->
+      <div class="appointment-card">
+        <div class="doctor-info">
+          <div class="avatar">RK</div>
+          <div>
+            <h3>Dr. Rajesh Kumar</h3>
+            <p>Dermatologist</p>
+          </div>
+        </div>
+
+        <div class="appointment-time">
+          <span class="date">Tomorrow</span>
+          <span class="time">11:00 AM</span>
+          <span class="status upcoming">upcoming</span>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>

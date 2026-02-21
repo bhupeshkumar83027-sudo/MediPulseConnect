@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f4f7f9;
+}
+
+/* Layout */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 20px;
+}
+
+.logo h2 span {
+    color: #27e1c1;
+}
+
+.menu {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.menu li {
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.menu li.active,
+.menu li:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* Main */
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+/* Header */
+.page-header h1 {
+    font-size: 28px;
+}
+
+.page-header p {
+    color: #666;
+    margin-top: 6px;
+}
+
+/* Secure Box */
+.secure-box {
+    background: linear-gradient(90deg, #0ea5a4, #0284c7);
+    color: white;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 25px 0;
+}
+
+/* Doctor Cards */
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 20px;
+}
+
+.doctor-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.doctor-info {
+    display: flex;
+    gap: 15px;
+}
+
+.doctor-info img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.rating {
+    color: #f59e0b;
+    font-size: 14px;
+}
+
+.hospital {
+    font-size: 13px;
+    color: #666;
+}
+
+.tags span {
+    background: #e5f6f6;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+/* Actions */
+.doctor-actions {
+    text-align: right;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #059669;
+    margin-bottom: 10px;
+}
+
+button {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+button.video {
+    background: #0ea5a4;
+    color: white;
+}
+
+button.voice {
+    background: #e5e7eb;
+}

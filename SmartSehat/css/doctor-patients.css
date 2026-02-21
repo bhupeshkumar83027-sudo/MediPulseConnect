@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f4f6f9;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: #0e1b2a;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    background: #00c2a8;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    background: #00c2a8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+}
+
+.avatar.small {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+}
+
+.online-dot {
+    width: 8px;
+    height: 8px;
+    background: #00ff66;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.menu a.active,
+.menu a:hover {
+    background: #14273d;
+    color: white;
+}
+
+.badge {
+    background: #00c2a8;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.badge.red {
+    background: #ff4d4d;
+}
+
+.logout {
+    color: #ff4d4d;
+}
+
+/* Main */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.topbar input {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+.profile-mini {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Toolbar */
+.patients-toolbar {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.patients-toolbar input {
+    width: 40%;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+.filters button {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    background: #e4e8ee;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.filters button.active {
+    background: #00c2a8;
+    color: white;
+}
+
+/* Patient Grid */
+.patients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.patient-card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.card-top h4 {
+    font-weight: 600;
+}
+
+.card-top p {
+    font-size: 13px;
+    color: #777;
+}
+
+.status {
+    margin-left: auto;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.status.stable {
+    background: #e6f7f3;
+    color: #00a88f;
+}
+
+.status.active {
+    background: #e8f0ff;
+    color: #3a6ff7;
+}
+
+.status.critical {
+    background: #ffe5e5;
+    color: #e74c3c;
+}
+
+.card-body {
+    margin-bottom: 12px;
+}
+
+.condition {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.allergy {
+    color: #e74c3c;
+    font-size: 13px;
+}
+
+.tags span {
+    display: inline-block;
+    background: #eef2f7;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 6px;
+    margin-top: 6px;
+}

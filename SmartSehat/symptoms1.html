@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Symptoms Checker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- SAME CSS -->
+  <link rel="stylesheet" href="css/style_symptoms.css">
+
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    .float-animation {
+      animation: float 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-white min-h-screen font-sans">
+
+<!-- NAVBAR (LOGIN + SIGNUP VISIBLE) -->
+<nav id="NavCheck" class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-lg shadow-sm z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <div class="flex items-center gap-4">
+      <div class="bg-blue-600 text-white p-2 rounded-xl shadow-md">
+        <i class="fas fa-heartbeat text-lg"></i>
+      </div>
+      <span class="text-xl font-bold text-gray-800">Smart Sehat</span>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <a href="login_patient.html"
+         class="px-5 py-2 rounded-xl text-gray-700 hover:text-blue-600 transition">
+        Log In
+      </a>
+
+      <a href="signup_patient.html"
+         class="px-6 py-2 rounded-xl bg-blue-600 text-white font-semibold shadow-md hover:bg-blue-700 hover:scale-105 transition">
+        Sign Up
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="min-h-screen flex items-center justify-center px-6 py-12 pt-28">
+  <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- LEFT -->
+    <div class="flex justify-center">
+      <img
+        src="https://media3.giphy.com/media/3o7TKLC8zBUd7eEteE/giphy.webp"
+        alt="Doctor"
+        class="w-full max-w-md drop-shadow-2xl hover:scale-105 transition">
+    </div>
+
+    <!-- RIGHT -->
+    <div class="space-y-8">
+
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800">
+          Check Your Symptoms <br>
+          <span class="text-blue-600">Instantly & Smartly</span>
+        </h1>
+        <p class="mt-4 text-gray-600 text-lg">
+          AI-powered health assistant
+          <span class="block text-sm mt-2 text-gray-500">
+            ⚠️ Not a substitute for professional advice
+          </span>
+        </p>
+      </div>
+
+      <!-- INPUT -->
+      <div class="relative">
+        <input
+          type="text"
+          id="symptomInputMed"
+          placeholder="Type your symptom (e.g., fever, headache)"
+          class="w-full p-5 pr-20 rounded-2xl shadow-lg border focus:ring-2 focus:ring-blue-400 outline-none text-lg">
+
+        <button
+          onclick="getSuggestion()"
+          class="absolute right-3 top-1/2 -translate-y-1/2 bg-blue-600 text-white px-5 py-3 rounded-xl">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+
+      <!-- VOICE -->
+      <button
+        onclick="startRecognitionMedicine()"
+        class="w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-2xl font-semibold text-lg">
+        🎙️ Speak Your Symptom
+      </button>
+
+      <!-- RESULT -->
+      <div
+        id="resultBox"
+        class="p-6 bg-white rounded-2xl shadow-inner border min-h-[80px] text-gray-700">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ================= SAME AI CODE ================= -->
+
+<!-- MEDICINE VOICE -->
+<script>
+function startRecognitionMedicine() {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) return alert("Speech recognition not supported.");
+
+  const recognition = new SpeechRecognition();
+  recognition.lang = 'en-US';
+  recognition.start();
+
+  recognition.onresult = function(event) {
+    const speechResult = event.results[0][0].transcript.trim();
+    document.getElementById("symptomInputMed").value = speechResult;
+    getSuggestion();
+  };
+}
+</script>
+
+<!-- CHATBOT VOICE -->
+<script>
+function startRecognitionChatbot() {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) return;
+
+  const recognition = new SpeechRecognition();
+  recognition.lang = 'en-US';
+  recognition.start();
+
+  recognition.onresult = function(event) {
+    const transcript = event.results[0][0].transcript.trim();
+
+    if (window.chatbase) {
+      window.chatbase("message", transcript, { userId: "patient" });
+    }
+
+    setTimeout(() => {
+      const iframe = document.querySelector("iframe[src*='chatbase']");
+      if (iframe) {
+        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const inputBox = innerDoc.querySelector("input[type='text'], textarea");
+        const sendBtn = innerDoc.querySelector("button, svg");
+
+        if (inputBox) {
+          inputBox.value = transcript;
+          inputBox.dispatchEvent(new Event("input", { bubbles: true }));
+          if (sendBtn) sendBtn.click();
+        }
+      }
+    }, 1000);
+  };
+}
+</script>
+
+<!-- SAME CHATBASE CHATBOT -->
+<script>
+(function(){
+  if(!window.chatbase || window.chatbase("getState") !== "initialized") {
+    window.chatbase = (...args) => {
+      if(!window.chatbase.q) window.chatbase.q = [];
+      window.chatbase.q.push(args);
+    };
+    window.chatbase = new Proxy(window.chatbase, {
+      get(target, prop) {
+        if(prop === "q") return target.q;
+        return (...args) => target(prop, ...args);
+      }
+    });
+  }
+  const onLoad = function() {
+    const script = document.createElement("script");
+    script.src = "https://www.chatbase.co/embed.min.js";
+    script.id = "5pf832nZZJFnf_fPGX1bI";
+    script.domain = "www.chatbase.co";
+    document.body.appendChild(script);
+  };
+  if(document.readyState === "complete") onLoad();
+  else window.addEventListener("load", onLoad);
+})();
+</script>
+
+<!-- SAME MEDICINE AI FILE -->
+<script src="js/script_symptoms.js"></script>
+
+</body>
+</html>

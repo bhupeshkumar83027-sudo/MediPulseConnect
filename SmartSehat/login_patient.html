@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Patient Portal - SmartSehat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex">
+
+    <!-- LEFT SIDE (Brand Section) -->
+    <div class="hidden md:flex w-1/2 bg-gradient-to-br from-teal-700 to-teal-500 text-white p-12 flex-col justify-center">
+
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold mb-2">SmartSehat</h1>
+            <p class="text-sm opacity-90">AI-Powered Healthcare Platform</p>
+        </div>
+
+        <h2 class="text-3xl font-semibold leading-snug mb-6">
+            Empowering Patients with <br> Smart Healthcare Access
+        </h2>
+
+        <p class="opacity-90 mb-10">
+            Book appointments, manage reports, and connect with doctors —
+            all securely powered by AI.
+        </p>
+
+        <div class="flex gap-6">
+            <div class="bg-white/10 p-5 rounded-xl backdrop-blur-md">
+                <p class="font-semibold">Easy Appointments</p>
+            </div>
+
+            <div class="bg-white/10 p-5 rounded-xl backdrop-blur-md">
+                <p class="font-semibold">Secure Access</p>
+            </div>
+
+            <div class="bg-white/10 p-5 rounded-xl backdrop-blur-md">
+                <p class="font-semibold">Health Tracking</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE (Login Section) -->
+    <div class="w-full md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
+
+        <div class="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
+
+            <div class="text-center mb-6">
+                <div class="bg-teal-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                    🩺
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800">Patient Login</h2>
+                <p class="text-sm text-gray-500">Sign in to access your dashboard</p>
+            </div>
+
+            <form method="post" id="login_patient_form" class="space-y-5">
+
+                <div>
+                    <label class="text-sm text-gray-600">Email Address</label>
+                    <input type="text" name="email" required
+                        class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none transition">
+                </div>
+
+                <div>
+                    <label class="text-sm text-gray-600">Password</label>
+                    <input type="password" name="password" required
+                        class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none transition">
+                </div>
+
+                <div class="flex items-center justify-between text-sm">
+                    <label class="flex items-center gap-2">
+                        <input type="checkbox" class="accent-teal-600">
+                        Remember me
+                    </label>
+                    <a href="#" class="text-teal-600 hover:underline">Forgot password?</a>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-gradient-to-r from-teal-600 to-blue-600 text-white py-2 rounded-lg font-semibold hover:opacity-90 transition">
+                    Sign In to Dashboard
+                </button>
+            </form>
+
+            <p class="text-center text-gray-600 mt-6 text-sm">
+                Don't have an account?
+                <a href="signup_patient.html" class="text-teal-600 font-semibold hover:underline">
+                    Sign Up
+                </a>
+            </p>
+
+            <div id="login_message" class="text-red-500 mt-4 text-center text-sm"></div>
+        </div>
+    </div>
+
+
+<script>
+document.getElementById("login_patient_form")
+.addEventListener("submit", async function(e) {
+
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  const data = {
+    email: formData.get("email"),
+    password: formData.get("password")
+  };
+
+  try {
+    const response = await fetch("http://localhost:5000/api/patient/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      window.location.href = "dashboard_patient.html";
+    } else {
+      document.getElementById("login_message").innerText = result.message;
+    }
+
+  } catch (err) {
+    document.getElementById("login_message").innerText = "Server error";
+  }
+});
+</script>
+
+</body>
+</html>

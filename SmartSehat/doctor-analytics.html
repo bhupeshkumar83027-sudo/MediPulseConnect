@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartSehat - Analytics</title>
+<link rel="stylesheet" href="css/doctor-analytics.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">❤</div>
+            <div>
+                <h3>SmartSehat</h3>
+                <span>Doctor Portal</span>
+            </div>
+        </div>
+
+        <div class="doctor-profile">
+            <div class="avatar">DK</div>
+            <div>
+                <h4>Dr. Deepika Kapoor</h4>
+                <p>Cardiologist • MBBS, MD</p>
+                <span class="online-dot"></span>
+                <small>Available for consultation</small>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="#">Overview</a>
+            <a href="#">Appointments <span class="badge">3</span></a>
+            <a href="#">My Patients</a>
+            <a href="#">Consultations <span class="badge red">1</span></a>
+            <a href="#">Prescriptions</a>
+            <a href="#" class="active">Analytics</a>
+            <a href="#">Settings</a>
+            <a href="#">Notifications <span class="badge">3</span></a>
+            <a href="#" class="logout">Sign Out</a>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+            <div>
+                <h2>Analytics</h2>
+                <p>Performance and earning insights</p>
+            </div>
+
+            <div class="topbar-right">
+                <input type="text" placeholder="Search patients, records...">
+                <div class="profile-mini">
+                    <div class="avatar small">DK</div>
+                    <span>Dr. Deepika Kapoor</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats">
+            <div class="card">
+                <span class="growth positive">+15%</span>
+                <h3>57</h3>
+                <p>Consultations This Month</p>
+            </div>
+
+            <div class="card">
+                <span class="growth positive">+3%</span>
+                <h3>87%</h3>
+                <p>Patient Retention Rate</p>
+            </div>
+
+            <div class="card">
+                <span class="growth positive">-2 min</span>
+                <h3>22 min</h3>
+                <p>Avg. Consultation Time</p>
+            </div>
+
+            <div class="card">
+                <span class="growth positive">+0.2</span>
+                <h3>4.9/5</h3>
+                <p>Patient Satisfaction</p>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts">
+
+            <!-- Revenue Chart -->
+            <div class="chart-box">
+                <h3>Monthly Revenue</h3>
+                <p>Earnings over the last 6 months</p>
+                <div class="revenue-chart">
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <!-- Pie Chart -->
+            <div class="chart-box">
+                <h3>Condition Mix</h3>
+                <p>Patient distribution by condition</p>
+                <div class="pie-chart"></div>
+
+                <ul class="legend">
+                    <li><span class="dot green"></span>Hypertension 22%</li>
+                    <li><span class="dot blue"></span>Diabetes 18%</li>
+                    <li><span class="dot red"></span>Cardiac 15%</li>
+                    <li><span class="dot orange"></span>Respiratory 20%</li>
+                    <li><span class="dot purple"></span>Others 25%</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>
